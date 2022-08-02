@@ -1,0 +1,163 @@
+@import url("/utilities/apis-font/index.css");
+@import url("/utilities/web-icons/index.css");
+popup,
+popup-group {
+  display: block;
+  max-width: 360px;
+  min-width: 180px;
+  border: 1px solid rgba(0,0,0,.1);
+  box-shadow: 8px 8px 11px 0px rgb(0 0 0 / 20%);
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: "Poppins", "Segoe Alt Regular", sans-serif;
+  max-height: calc(100vh - 100px);
+  background: #ffffff;
+  color: #727888;
+  border-radius: 6px;
+  position: fixed;
+  padding: 5px 0;
+}
+popup {
+  z-index: 111111;
+}
+popup * {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  word-wrap: break-word;
+  font-family: "Poppins", "Segoe Alt Regular", sans-serif;
+}
+popup popup-list {
+  max-height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+popup-list::-webkit-scrollbar {
+  width: 12px;
+}
+popup-list::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+popup-list::-webkit-scrollbar-track {
+  background: none;
+  border: none;
+}
+popup button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+  padding: 3px;
+  transition: 0.1s;
+  user-select: none;
+  cursor: pointer;
+  text-align: left;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 32px;
+  min-height: 32px;
+  font-weight: 500;
+}
+popup button span {
+  max-height: 100%;
+  display: block;
+  word-wrap: normal;
+  white-space: nowrap;
+  color: #434555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.1s;
+}
+popup button span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+  height: 26px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+popup button span:nth-child(1) svg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: #434555;
+  transform: translate(-50%, -50%);
+}
+popup button span:nth-child(1) i {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #434555;
+  transform: translate(-50%, -50%);
+}
+popup button span:nth-child(2) {
+  width: calc(100% - 50px);
+  min-width: calc(100% - 50px);
+}
+popup button span:nth-child(3) {
+  width: 20px;
+  min-width: 20px;
+  height: 26px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+popup button span:nth-child(3) svg {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -5px;
+  fill: #434555;
+  transition: 0.1s;
+}
+popup button:not([disabled]):hover {
+  background: rgb(0 0 0 / 5%);
+}
+popup button:not([disabled]):hover span,
+popup button:not([disabled]):hover span:nth-child(1) i {
+  color: #121212;
+}
+popup button:not([disabled]):hover span:nth-child(1) svg,
+popup button:not([disabled]):hover span:nth-child(3) svg {
+  fill: #121212;
+}
+popup button:disabled {
+  cursor: default;
+  color: #727888;
+}
+popup button:disabled span {
+  color: #727888;
+}
+popup button:disabled span:nth-child(1) {
+  color: #727888;
+}
+popup button:disabled span:nth-child(1) svg,
+popup button:disabled span:nth-child(3) svg {
+  fill: #727888;
+}
+popup popup-break {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 0;
+  margin: 2px auto;
+  height: 1px;
+  min-height: 1px;
+  background: rgb(0 0 0 / 20%);
+}
